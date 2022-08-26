@@ -1,0 +1,13 @@
+.album__list {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+}
+
+.album__box {
+  display: flex;
+  max-width: 15rem;
+  border: 0.125rem solid #000;
+  padding: 1rem;
+  margin: 1rem 0;
+}
