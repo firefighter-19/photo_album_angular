@@ -1,0 +1,8 @@
+.photo__box {
+  border: 0.125rem solid #000;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: rgb(146, 85, 111);
+  margin: 1rem 0;
+  width: 35rem;
+}

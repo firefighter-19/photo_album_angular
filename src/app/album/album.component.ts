@@ -7,7 +7,7 @@ import {
   OnInit,
 } from '@angular/core';
 import { ApiService } from '../api/api.service';
-import { IAlbum } from '../api/api.types';
+import { IPhotoAlbum } from '../api/api.types';
 
 @Component({
   selector: 'app-album',
@@ -16,7 +16,7 @@ import { IAlbum } from '../api/api.types';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AlbumComponent implements OnInit, OnDestroy {
-  albums$!: Observable<IAlbum[]>;
+  albums$!: Observable<IPhotoAlbum[]>;
   subscription!: Subscription;
   loading$!: Observable<boolean>;
 
@@ -24,11 +24,10 @@ export class AlbumComponent implements OnInit, OnDestroy {
     private readonly apiService: ApiService,
     private loadingService: LoadingService
   ) {}
-
   ngOnInit(): void {
     this.loading$ = this.loadingService.loading$;
-    this.subscription = this.apiService.getAlbums().subscribe();
-    this.albums$ = this.apiService.albums$;
+    this.subscription = this.apiService.getPhotoAlbums().subscribe();
+    this.albums$ = this.apiService.photoAlbum$;
   }
   ngOnDestroy(): void {
     this.subscription.unsubscribe();

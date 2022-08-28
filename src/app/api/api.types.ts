@@ -12,8 +12,6 @@ export interface IPhoto {
   thumbnailUrl: string;
 }
 
-export interface State {
-  data: IAlbum[];
-  loading: boolean;
-  error: any;
+export interface IPhotoAlbum extends IAlbum {
+  photos: IPhoto[];
 }

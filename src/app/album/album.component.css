@@ -2,12 +2,21 @@
   display: flex;
   flex-direction: column;
   margin-left: 2rem;
+  width: 100%;
+}
+
+.photo__album {
+  display: flex;
+  justify-content: space-around;
 }
 
 .album__box {
   display: flex;
-  max-width: 15rem;
+  width: 15rem;
   border: 0.125rem solid #000;
+  border-radius: 12px;
+  background-color: #5981d6;
   padding: 1rem;
   margin: 1rem 0;
+  max-height: 15rem;
 }

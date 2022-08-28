@@ -1,11 +1,14 @@
-<ul *ngIf="albums$ | async as albums; else error" class="album__list">
-  <li *ngFor="let album of albums" class="album__box">
-    <p>{{album.title}}</p>
+<ul *ngIf="albums$ | async as albums" class="album__list">
+  <li *ngFor="let album of albums" class="photo__album">
+    <p class="album__box" *ngIf="album.photos.length">{{album.title}}</p>
+    <ul>
+      <li *ngFor="let photo of album.photos">
+        <app-photo [photo]="photo" ></app-photo>
+      </li>
+    </ul>
   </li>
 </ul>
 
 <div *ngIf="loading$ | async as loading">
   <p>Loading...</p>
 </div>
-
-<ng-template #error>Error</ng-template>
