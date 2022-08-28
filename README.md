@@ -1,8 +1,6 @@
-<h1>PhotoAlbumAngular</h1>
+<h1 align="center">🗾🎑🏞🌅🌄🌠🎇 PhotoAlbumAngular 🎆🌇🌆🌃🌌🌉🌁</h1>
 <div align="center">
-  <p align="center">
-    <img src="https://photos.app.goo.gl/SxVA2eGCX4zYkvZQA" width="600" alt="App view" />
-  </p>
+  <img src="https://live.staticflickr.com/65535/52316173056_301208c149_b.jpg" width="600" alt="App view" />
 </div>
 
 <p>Project downloads on init the pack of albums and photos and connects them together</p>
